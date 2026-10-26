@@ -1,0 +1,39 @@
+person.go
+
+package person
+
+type Person struct {
+    Name string
+    Age  int
+}
+
+func (p Person) Greet() {
+    println("Hello, my name is", p.Name)
+}
+
+
+main.go
+
+package main
+
+import (
+    "fmt"
+    "myproject/person"
+)
+
+func main() {
+    p := person.Person{
+        Name: "Alice",
+        Age:  25,
+    }
+
+    fmt.Println("Name:", p.Name)
+    fmt.Println("Age:", p.Age)
+
+    p.Greet()
+}
+
+
+go.mod
+
+module myproject

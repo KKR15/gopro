@@ -1,0 +1,29 @@
+package main
+
+import "fmt"
+
+func main() {
+	numbers := []int{10, 5, 30, 15, 20}
+
+	for i := 0; i < len(numbers); i++ {
+		for j := i + 1; j < len(numbers); j++ {
+			if numbers[i] < numbers[j] {
+				numbers[i], numbers[j] = numbers[j], numbers[i]
+			}
+		}
+	}
+
+	fmt.Println("Reverse sorted integers:", numbers)
+
+	names := []string{"Koushik", "Rahul", "Amit", "Zara", "Bharath"}
+
+	for i := 0; i < len(names); i++ {
+		for j := i + 1; j < len(names); j++ {
+			if names[i] < names[j] {
+				names[i], names[j] = names[j], names[i]
+			}
+		}
+	}
+
+	fmt.Println("Reverse sorted strings:", names)
+}
